@@ -13,6 +13,10 @@ variable "cluster-base-domain" {
   default = "azure.redis.life"
 }
 
+variable "client_secret" {
+  description = "Identity: AZ Service Principal"  
+}
+
 variable "cluster-base-resource-group" {
   description = "Identity: The resource group that contains the zone file for the cluster-base-domain."
   default = null
