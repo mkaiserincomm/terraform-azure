@@ -48,7 +48,7 @@ resource "azurerm_network_interface" "nic" {
 
 resource "azurerm_network_interface_security_group_association" "nic_sg" {
   count                     = var.node-count
-  network_interface_id      = element(azurerm_network_interface.nic.*.id, count.index).id
+  network_interface_id      = element(azurerm_network_interface.nic.*.id, count.index)
   network_security_group_id = azurerm_network_security_group.sg.id  
 }
 
@@ -77,7 +77,7 @@ resource "azurerm_network_interface" "nic-client" {
 
 resource "azurerm_network_interface_security_group_association" "nic-client_sg" {
   count                     = var.node-count
-  network_interface_id      = element(azurerm_network_interface.nic-client.*.id, count.index).id
+  network_interface_id      = element(azurerm_network_interface.nic-client.*.id, count.index)
   network_security_group_id = azurerm_network_security_group.sg.id  
 }
 
