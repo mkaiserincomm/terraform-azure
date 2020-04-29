@@ -30,6 +30,7 @@ module "redis_cluster-useast2"  {
     compliance_data_profile         = var.compliance_data_profile
     data_sovereignty_location       = var.data_sovereignty_location
     client_secret                   = var.client_secret
+    client_id                       = var.client_id
     
     node-count                      = var.node-count
 }
@@ -66,6 +67,7 @@ module "redis_cluster-uswest2"  {
     compliance_data_profile         = var.compliance_data_profile
     data_sovereignty_location       = var.data_sovereignty_location
     client_secret                   = var.client_secret
+    client_id                       = var.client_id
 
     node-count                      = var.node-count
 }
